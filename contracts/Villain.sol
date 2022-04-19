@@ -5,11 +5,11 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 
 contract Villain is ERC1155, Ownable {
-    uint256 public constant DEATH_SCARE = 0;
+    uint256 public constant MY_NFT = 0;
     string public name = "Villain County";
 
     constructor() public ERC1155("https://a69nvnc2nuyk.usemoralis.com/{id}.json") {
-        _mint(msg.sender, DEATH_SCARE, 1, "");
+        _mint(msg.sender, MY_NFT, 1, "");
     }
 
     function mint(address to, uint256 id, uint256 amount) public onlyOwner {
